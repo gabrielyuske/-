@@ -1,0 +1,53 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E265" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStatementEffectInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="PyQt5-stubs==5.14.2.2" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="PyQt5.uic.loadUI" />
+          <option value="speech_recognition" />
+          <option value="xlsmwriter" />
+          <option value="pandas" />
+          <option value="inteligenciaartificial.main.ui_main" />
+          <option value="inteligenciaartificial.main.*" />
+          <option value="opencv" />
+          <option value="sklearn.*" />
+          <option value="pyqttest.self" />
+          <option value="pyqttest.escrever" />
+          <option value="pyqttest.line" />
+          <option value="PySide2.QtWidgets.clicked.connect" />
+          <option value="uiteste.*" />
+          <option value="PyQt5.QtWidgets.clicked.connect" />
+          <option value="PyQt5.QtWidgets.QtApplication" />
+          <option value="webbrowser.*" />
+          <option value="urllib2" />
+          <option value="apiclient.discovery" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
