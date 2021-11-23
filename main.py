@@ -1,5 +1,5 @@
 import pandas as pd
-import yfinance as yf #https://pypi.org/project/yfinance/
+import yfinance as yf
 import altair as alt
 import streamlit as st
 
@@ -11,17 +11,17 @@ st.sidebar.write("""
 """)
 
 st.sidebar.write("""
-## 表示日数選択
+# 表示日数選択
 """)
 
-days = st.sidebar.slider("日数",1,50,20)
+days = st.sidebar.slider("日数", min_value=1, max_value=50, value=20)
 
 st.write(f"""
 ### 過去 **{days}日間**のGAFA株価
 """)
 
-@st.cache #cache にためて高速化のため
-def get_data(days,tickers):
+@st.cache
+def get_data(days, tickers):
     df = pd.DataFrame()
     for company in tickers.keys():
     #company = "facebook"
@@ -32,7 +32,7 @@ def get_data(days,tickers):
         hist.columns = [company]
         hist = hist.T
         hist.index.name = "Name"
-        df = pd.concat([df,hist])#df　に　histを入れる
+        df = pd.concat([df, hist])#df　に　histを入れる
     return df
 
 try:
@@ -42,15 +42,17 @@ try:
 
     ymin, ymax = st.sidebar.slider(
         '範囲を指定してください',
-        0.0, 3500.0,(0.0 ,4500.0)
+        0.0, 3500.0, (0.0 , 4500.0)
     )
 
     tickers = {"apple":"AAPl",
                "facebook":"FB",
-               "bitcoin":"BTC-USD",
                "microsoft":"MSFT",
                "netflix":"NFLX",
-               "amazon":"AMZN"
+               "amazon":"AMZN",
+               "tesla":"TSLA",
+               "google": "GOOG",
+               "sss":"BNB-USD"
 
     }
 

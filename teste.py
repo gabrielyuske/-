@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import yfinance as yf #https://pypi.org/project/yfinance/
 import altair as alt
 
-aapl = yf.Ticker("AAPL")
+aapl = yf.Ticker("MSFT")
 days = 20
 hist = (aapl.history(period=f"{days}d")) # period= serve pra selecionar a data que quer
 
@@ -35,7 +35,7 @@ hist = hist.T
 hist.index.name = "Name"
 #print(hist)
 
-tickers = {"apple":AAPl,
+tickers = {"apple":"AAPl",
            "facebook":"FB",
            "bitcoin":"BTC-USD",
            "microsoft":"MSFT",
